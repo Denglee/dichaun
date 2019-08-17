@@ -4,9 +4,7 @@
 // import store from './store'
 //
 // Vue.config.productionTip = false
-//
-//
-//
+
 // new Vue({
 //   router,
 //   store,
@@ -17,7 +15,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-// import './registerServiceWorker'
 import Axios from 'axios'
 Vue.config.productionTip = false
 
@@ -33,11 +30,12 @@ Vue.use(MintUI)
 
 
 // 引入自己的全局的css
-import './assets/css/global.css'
+import '@/assets/css/global.scss'
+import '@/assets/js/main.js'
 
 // 注册全局组件
-// import topTabbar from '@/components/topTabbar'
-// Vue.component(topTabbar.name,topTabbar)
+import topTabbar from '@/components/topTabbar'
+Vue.component(topTabbar.name,topTabbar);
 // import goTop from "@/components/goTop";
 // Vue.component(goTop.name,goTop)
 
@@ -46,8 +44,8 @@ import './assets/css/global.css'
 
 
 // 配置公共的url
-Axios.defaults.baseURL = 'https://api.it120.cc/ld'
-Axios.defaults.headers.post['Content-Type'] = 'application/json'
+Axios.defaults.baseURL = '/api';
+Axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 // 配置 axios
 Vue.prototype.$axios=Axios;
