@@ -7,14 +7,19 @@ export default new Vuex.Store({
   //声明全局维护的状态
   state: {
     stateName:"开始状态=statename",  //默认值
+
+    stateNum:1,
   },
 
   //实时监听state值的变化(最新状态)
   getters: {
     gettersName(state){
         return  state.stateName;
-    }
+    },
 
+    gettersNumber(state){
+      return  state.stateNum;
+    }
     // gettersName = state => state.stateName
   },
 
@@ -29,6 +34,10 @@ export default new Vuex.Store({
       state.stateName=name;
     },
 
+    mutationsNum(state){
+      state.stateNum++;
+    },
+
     // mutationsName=(state, name) => {
     //   state.stateName = name
     // },
@@ -41,7 +50,11 @@ export default new Vuex.Store({
 
     actionsName2({commit},name){
       return commit ('mutationsName2',name);
-    }
+    },
+
+    actionsNum({commit}){
+      return commit('mutationsNum');
+    },
 
     // ES6精简写法
     //actionsName = ({commit},name) => commit('mutationsName', name)
@@ -51,7 +64,7 @@ export default new Vuex.Store({
 
 /*
 如果我们不喜欢这种在页面上使用
-“this.$stroe.state.count”
+“this.$store.state.count”
 和“this.$store.dispatch('funName')”这种很长的写法，
 那么我们可以使用mapState、mapGetters、mapActions就不会这么麻烦了；
 */

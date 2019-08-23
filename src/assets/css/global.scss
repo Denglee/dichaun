@@ -70,7 +70,7 @@ $color-paleWhite:#f4f4f4;
 
 /*公共头部*/
 .header-box{
-    padding-bottom: 0.6rem;
+    padding-bottom: 0.42rem;
 }
 .header-nav{
     width: 100%;
@@ -83,17 +83,17 @@ $color-paleWhite:#f4f4f4;
     background-color: $color-blue;
     position: relative;
     color: $color-white;
-    height: 0.6rem;
-    line-height: 0.6rem;
+    height: 0.42rem;
+    line-height: 0.42rem;
     text-align: center;
     font-size: 0.16rem;
 }
 .goBack{
     /*border: solid 1px red;*/
-    height: 0.26rem;
-    padding:0 0.2rem;
+    height: 60%;
+    padding: 0 .6rem 0 0.1rem;
     position: absolute;
-    top:  0.18rem;
+    top: 20%;
     left: 0;
 }
 
@@ -113,7 +113,7 @@ $color-paleWhite:#f4f4f4;
     width: 20%;
     background-color: $color-paleWhite;
     border: none;
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - .94rem);
 }
 .myTab-item{
     display: block;
@@ -151,10 +151,11 @@ $color-paleWhite:#f4f4f4;
 }
 .nav-right-link a{
     border-radius: 20px;
-    padding: 0.02rem 0.08rem;
-    border: solid 1px $color-gray;
-    font-size: .12rem;
-    margin: 0 .1rem .1rem 0;
+    padding: 0.06rem 0.14rem;
+    border: solid 1px #b6b6b6;
+    font-size: 0.12rem;
+    margin: 0 0.1rem 0.1rem 0;
+    min-width: .5rem;
 }
 
 /*============ 分类首页 到此结束 ============*/
@@ -202,32 +203,47 @@ $color-paleWhite:#f4f4f4;
 .classify-banner{
     display: block;
     width: 100%;
-    /*height: 80px;*/
+    height: .56rem;
 }
 
 
 .nav-classify-link{
     display: flex;
     flex-wrap:wrap ;
+    padding:4% 4% 0;
+}
+.nav-classify-link li{
+    width: 16.6%;
 }
 .nav-classify-link span{
-    border-radius: .20rem;
-    padding: .02rem .08rem;
-    border: solid 1px $color-gray;
-    font-size: .12rem;
-    margin: 0 .10rem .10rem 0;
+    border-radius: 0.2rem;
+    padding: 0.06rem 0;
+    border: solid 1px #b6b6b6;
+    font-size: 0.12rem;
+    margin: 0 0.1rem 0.1rem 0;
+    min-width: 0.5rem;
+    text-align: center;
+    display: inline-block;
 }
 .nav-classify-link .active{
     border: solid 1px $color-green;
     color: $color-green;
 }
+.shop-ul,
+.shop-box{
+    display: flex;
+    flex-wrap: wrap;
+    padding:0 4% 4%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .shop-item{
     width: 30.66%;
     margin-right: 4%;
     border: solid 1px $color-gray;
     box-sizing: border-box;
     text-align: center;
-    float: left;
     padding: .05rem;
     margin-bottom: .10rem;
     background-color: $color-white;
@@ -241,7 +257,8 @@ $color-paleWhite:#f4f4f4;
     }
      .btn-group{
          display: flex;
-         a{
+         margin-top: 0.04rem;
+         .btn-look{
              display: block;
              background-color: $color-green;
              width: 48%;
@@ -249,9 +266,10 @@ $color-paleWhite:#f4f4f4;
              font-size: .12rem;
              color: $color-white;
              padding: .04rem;
+             margin-right: 4%;
          }
          .btn-look{
-            margin-right: 4%;
+
          }
      }
 }
@@ -259,7 +277,7 @@ $color-paleWhite:#f4f4f4;
 .shop-item:nth-child(3n){
     margin-right: 0;
 }
-.shop-item button{
+.shop-item .shop-price{
     border-radius: .20rem;
     padding: .02rem 0;
     font-size: .12rem;
@@ -271,16 +289,20 @@ $color-paleWhite:#f4f4f4;
     display: block;
     margin: .04rem auto 0;
 }
+.list-name{
+    font-size: .12rem;
+    height: .2rem;
+}
 /*==================分类结束=============*/
 
 /*=================底部开始=============*/
 .footer-box{
-    padding-top: .60rem;
+    padding-top: .52rem;
 }
 .footer-nav{
     width: 100%;
-    height: .60rem;
-    padding: .04rem 0;
+    height: .52rem;
+    padding: .06rem 0;
     box-sizing: border-box;
     border-top: solid 1px $color-gray;
     background-color: $color-white;
@@ -295,10 +317,12 @@ $color-paleWhite:#f4f4f4;
 }
 .footer-item{
    flex: 1;
+    a{
+        display: block;
+    }
 }
 .footer-item img{
-    height: .2rem;
-    margin:.04rem 0;
+    height: .18rem;
 }
 .footer-item .text{
     font-size: .14rem;
@@ -387,3 +411,19 @@ $color-paleWhite:#f4f4f4;
     display: block;
     margin: .04rem auto 0;
 }
+
+.userEdit-box{
+    position: relative;
+    padding-top: 10px;
+    .no-release{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(75, 75, 75, 0.6);
+        color: $color-white;
+        z-index: 111;
+        font-size: .12rem;
+    }
+}
+

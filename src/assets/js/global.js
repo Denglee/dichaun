@@ -5,7 +5,6 @@
   };
   function fnResize() {
     let deviceWidth = document.documentElement.clientWidth || window.innerWidth;
-    console.log(deviceWidth);
     if (deviceWidth >= 750) {
       deviceWidth = 750;
     }
@@ -14,6 +13,11 @@
     }
     document.documentElement.style.fontSize = (deviceWidth / 7.5*2) + 'px';
     console.log( document.documentElement.style.fontSize);
+  }
+
+const  nowUrl='http://www.gddcdz.cn:10009';
+  export default {
+      nowUrl:nowUrl
   }
 
 /*/storage 存储

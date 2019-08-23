@@ -1,8 +1,8 @@
 <template>
     <header class="header-box">
         <nav class="header-nav">
-            <div class="header-top">
-                <img src="../assets/icon/ic_return.png" class="goBack" alt=""  @click='goBack' :noIndex='noIndex'>
+            <div class="header-top" >
+                <img src="../assets/icon/ic_return.png" class="goBack" alt=""  @click='goBack'  :noIndex='noIndex' :data-routername="routerName">
                 {{title}}
             </div>
         </nav>
@@ -14,16 +14,20 @@
     name: "topTabbar",
     data() {
       return {
-        // noIndex:true,
+
       }
     },
     props:{
       "title":String,
-      "noIndex":Boolean
+      "noIndex":Boolean,
+       "routerName":String,
     },
     methods:{
-      goBack(){
-        this.$router.go(-1);
+      goBack(e){
+          // console.log()
+          let routerName=e.target.dataset.routername;
+          console.log(routerName)
+        this.$router.push({name:routerName});
       }
     }
   }
